@@ -9,6 +9,7 @@
 <ion-content [fullscreen]="true"  color="light">
   <ion-searchbar placeholder="Buscar">  </ion-searchbar>
   <ion-list>
+    <ion-item-sliding>
     <ion-item lines="full">
       <ion-thumbnail slot="start">
         <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vlv1gn98GqMnKHLSh0dNciqGfBl.jpg">
@@ -17,7 +18,6 @@
         <div>
           <h1>Superman e Lois (2021)</h1>
         <p>Action & Adventure</p>
-        <p>Sci-Fi & Fantasy</p>
         <p>Drama 1h 4m</p>
         </div>
       </ion-label>
@@ -26,5 +26,36 @@
       </ion-chip>
 
     </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option >
+        <ion-icon slot="icon-only" name="star-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item lines="full">
+      <ion-thumbnail slot="start">
+        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wllzjZxg4ynlAm5xmOICJ2uHOPJ.jpg">
+      </ion-thumbnail>
+      <ion-label class="ion-text-nowrap" >
+        <div>
+          <h1>Godzilla vs. Kong (2021)</h1>
+        <p>Ação, Aventura, Ficção científica</p>
+        <p>Drama 1h 52m</p>
+        </div>
+      </ion-label>
+      <ion-chip color="success" outline>
+        <ion-label>76%</ion-label>
+      </ion-chip>
+
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option >
+        <ion-icon slot="icon-only" name="star-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
   </ion-list>
 </ion-content>
