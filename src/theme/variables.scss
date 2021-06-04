@@ -3,6 +3,13 @@
 
 /** Ionic CSS Variables **/
 :root {
+  /**pink**/
+  --ion-color-pink: #b82ad5;
+  --ion-color-pink-rgb: 184,42,213;
+  --ion-color-pink-contrast: #ffffff;
+  --ion-color-pink-contrast-rgb: 255,255,255;
+  --ion-color-pink-shade: #a225bb;
+  --ion-color-pink-tint: #bf3fd9;
   /**laranja  **/
   --ion-color-laranja: #f69104;
   --ion-color-laranja-rgb: 246,145,4;
@@ -90,6 +97,14 @@
   --ion-color-contrast-rgb: var(--ion-color-laranja-contrast-rgb);
   --ion-color-shade: var(--ion-color-laranja-shade);
   --ion-color-tint: var(--ion-color-laranja-tint);
+}
+.ion-color-pink {
+  --ion-color-base: var(--ion-color-pink);
+  --ion-color-base-rgb: var(--ion-color-pink-rgb);
+  --ion-color-contrast: var(--ion-color-pink-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+  --ion-color-shade: var(--ion-color-pink-shade);
+  --ion-color-tint: var(--ion-color-pink-tint);
 }
 
 @media (prefers-color-scheme: dark) {
