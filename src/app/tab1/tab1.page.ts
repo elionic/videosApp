@@ -1,3 +1,4 @@
+import { IFilme } from '../models/Ifilme.model';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -8,6 +9,30 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  titulo  = 'Videos App';
+
+  listaVideos: IFilme[] = [
+    {
+      nome:'Superman e Lois (2021)',
+      lancamento: 'Action & Adventure',
+      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vlv1gn98GqMnKHLSh0dNciqGfBl.jpg',
+      generos: ['Drama', ' 1h 4m']
+    },
+    {
+      nome:'Godzilla vs. Kong (2021)',
+      lancamento: 'Ação, Aventura, Ficção científica',
+      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wllzjZxg4ynlAm5xmOICJ2uHOPJ.jpg',
+      generos: ['Drama', '1h 52m']
+    },
+    {
+      nome:'NOVO  FILME ADICONADO',
+      lancamento: 'Ação, Aventura, Ficção científica',
+      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wllzjZxg4ynlAm5xmOICJ2uHOPJ.jpg',
+      generos: ['Drama', '1h 52m']
+    }
+  ];
+
 
   constructor(public alertController: AlertController, public toastController: ToastController) {}
 
