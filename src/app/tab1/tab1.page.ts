@@ -30,10 +30,24 @@ export class Tab1Page {
       pagina: '/godizilla'
     },
     {
-      nome:'NOVO  FILME ADICONADO',
-      lancamento: 'Ação, Aventura, Ficção científica',
-      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wllzjZxg4ynlAm5xmOICJ2uHOPJ.jpg',
-      generos: ['Drama', '1h 52m'],
+      nome:'Cruella',
+      lancamento: '28/05/2021 (BR)',
+      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ljPHd7WiPVKmuXi1hgQUpZQslbC.jpg',
+      generos: ['Comédia', 'Crime', '2h 14m'],
+      pagina: '/godizilla'
+    },
+    {
+      nome:'Army of the Dead: Invasão em Las Vegas (2021)',
+      lancamento: '14/05/2021 (US)',
+      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kn72J6BFcN71VYOl8sTVeo7x9ph.jpg',
+      generos: ['Ação', 'Terror', 'Thriller', 'Crime', '2h 28m'],
+      pagina: '/godizilla'
+    },
+    {
+      nome:'Infiltrado (2021)',
+      lancamento: '27/05/2021 (BR)',
+      cartaz:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dAtAp4IeT6EYGhewfnNNhalobme.jpg',
+      generos: ['Ação', 'Crime', '1h 59m'],
       pagina: '/godizilla'
     }
   ];
