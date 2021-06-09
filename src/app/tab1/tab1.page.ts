@@ -1,18 +1,22 @@
-import { Router, Routes } from '@angular/router';
+import { IGenero } from './../models/IGenero.model';
+import { GeneroService } from './../services/genero.service';
+import { FilmeService } from './../services/filme.service';
+import { Router} from '@angular/router';
 import { DadosService } from './../services/dados.service';
 import { IFilme } from '../models/Ifilme.model';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { IListaFilmes, IFilmeApi } from '../models/IFilmeAPI.model';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit{
 
-  titulo  = 'Videos App';
+  titulo  = 'Filmes';
 
   listaVideos: IFilme[] = [
     {
@@ -51,17 +55,30 @@ export class Tab1Page {
       pagina: '/godizilla'
     }
   ];
-
+  listaFilmes: IListaFilmes;
+  generos: string[] = [];
 
   constructor(
     public alertController: AlertController,
     public toastController: ToastController,
     public dadosServices: DadosService,
-    public route: Router ) {}
+    public filmeService: FilmeService,
+    public generoservice: GeneroService,
+    public route: Router) {}
 
-    exibirFilme(filme: IFilme){
-this.dadosServices.gurdarDados('filme', filme);
-this.route.navigateByUrl('/dados-filme');
+    buscarFilmes(evento: any){
+      console.log(evento.target.value);
+      const busca =  evento.target.value;
+      if(busca && busca.trim()!==''){
+         this.filmeService.buscarFilmes(busca).subscribe(dados => {
+           console.log(dados);
+           this.listaFilmes = dados;
+         });
+    }
+  }
+    exibirFilme(filme: IFilmeApi){
+      this.dadosServices.gurdarDados('filme', filme);
+      this.route.navigateByUrl('/dados-filme');
     }
 
 
@@ -96,5 +113,15 @@ this.route.navigateByUrl('/dados-filme');
     });
     toast.present();
   }
+    ngOnInit(){
+      this.generoservice.buscarGeneros().subscribe(dados=>{
+        console.log('Generos : ', dados.genres);
+        dados.genres.forEach(genero => {
+           this.generos[genero.id] = genero.nome;
+        });
+        this.dadosServices.gurdarDados('generos', this.generos);
 
+      });
+
+    }
 }
