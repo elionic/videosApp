@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GodizillaPageRoutingModule } from './godizilla-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { GodizillaPage } from './godizilla.page';
+import { LoginPage } from './login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    GodizillaPageRoutingModule
+    LoginPageRoutingModule
   ],
-  declarations: [GodizillaPage]
+  declarations: [LoginPage]
 })
-export class GodizillaPageModule {}
+export class LoginPageModule {}
