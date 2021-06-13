@@ -23,7 +23,8 @@ registerLocaleData(localePt);
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   DadosService,
   {provide: LOCALE_ID, useValue: 'pt-BR'},
   ],
